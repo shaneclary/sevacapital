@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GISD Alignment Disclosure | Capital for Seva</title>
+  <meta name="gsid:alignment" content="2025-11-16">
+  <link rel="external" href="https://www.un.org/gsa/sites/www.un.org.gsa/files/2024-07/GISD%20Alliance%20Guidance%20on%20Sovereign%20SDG%20Bonds-FINAL.pdf">
+  <link rel="stylesheet" href="/css/gisd.css">
+</head>
+
+<body>
+  <nav class="global-nav">
+    <div class="nav-brand">Capital for Seva</div>
+    <div class="nav-links">
+      <a href="seva.html">Strategy Dossier</a>
+      <a href="pitch.html">Investor Pitch</a>
+      <a href="investor_portal.html">Investor Portal</a>
+      <a href="projectweaver.html">Project Weaver</a>
+      <a href="icma.html">ICMA Framework</a>
+      <a href="gisd-compliance.html" class="active">GISD Alignment</a>
+    </div>
+  </nav>
+
+  <main class="gisd-container">
+    <h1>GISD Sovereign SDG Bond Alignment</h1>
+    <p class="lead">Capital for Seva’s social-bond programme has been benchmarked against the <a href="https://www.un.org/gsa/sites/www.un.org.gsa/files/2024-07/GISD%20Alliance%20Guidance%20on%20Sovereign%20SDG%20Bonds-FINAL.pdf" target="_blank" rel="noopener">2024 GISD Alliance Guidance</a> for sovereign issuers.</p>
+
+    <h2>Self-Assessment Scorecard</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>GISD Criterion</th>
+          <th>Evidence</th>
+          <th>Status</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>1. Clear SDG alignment</td>
+          <td>Framework maps proceeds to 15 of 17 SDGs; exclusion list (DNSH) published.</td>
+          <td class="ok">✓ Aligned</td>
+        </tr>
+        <tr>
+          <td>2. Robust project pipeline</td>
+          <td>&ge; 3-year bankable pipeline (200 VCs, 1 M surgeries, AI roll-out).</td>
+          <td class="ok">✓ Aligned</td>
+        </tr>
+        <tr>
+          <td>3. Debt-sustainability</td>
+          <td>DSCR &ge; 1.25 stress-tested; IFC AAA co-issuer facility.</td>
+          <td class="ok">✓ Aligned</td>
+        </tr>
+        <tr>
+          <td>4. Institutional capacity</td>
+          <td>ICMA-compliant framework; Moody’s SPO; ring-fenced SPV treasury.</td>
+          <td class="ok">✓ Aligned</td>
+        </tr>
+        <tr>
+          <td>5. Transparency &amp; reporting</td>
+          <td>Annual allocation + impact reports; live KPI API; third-party assurance.</td>
+          <td class="ok">✓ Aligned</td>
+        </tr>
+        <tr>
+          <td>6. Investor engagement</td>
+          <td>Pre-issuance road-show script, order-book target ≥ 2× cover, coupon step-up.</td>
+          <td class="ok">✓ Aligned</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h2>External Validation</h2>
+    <ul>
+      <li>Second-Party Opinion: <a href="/assets/moody-spo.pdf">Moody’s ESG (download)</a></li>
+      <li>Climate Bonds Initiative: certification application submitted (file ref. CBI-SEVA-2025).</li>
+      <li>UNDP alignment letter: <a href="/assets/undp-alignment.pdf">view PDF</a></li>
+    </ul>
+
+    <p class="hash">SHA-256 of this page: <code id="gisd-hash">pending</code></p>
+  </main>
+  <script>
+    fetch('/api/hash?page=gisd')
+      .then(r => r.ok ? r.text() : Promise.reject())
+      .then(hash => document.getElementById('gisd-hash').textContent = hash)
+      .catch(() => { });
+  </script>
+</body>
+
+</html>

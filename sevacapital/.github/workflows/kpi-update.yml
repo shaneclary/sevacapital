@@ -1,0 +1,26 @@
+name: KPI Update
+
+on:
+  repository_dispatch:
+    types: [kpi-update]
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Update KPI JSON
+        run: |
+          mkdir -p public/kpi
+          echo '${{ toJson(github.event.client_payload) }}' > public/kpi/latest.json
+          git config user.name "cfseva-bot"
+          git config user.email "bot@users.noreply.github.com"
+          git add public/kpi/latest.json
+          if ! git diff --cached --quiet; then
+            git commit -m "chore: update KPI json via webhook"
+            git push
+          fi
+      - name: Notify GISD portal
+        run: |
+          curl -X POST https://yourdomain.com/api/gisd/refresh \
+            -H "Authorization: Bearer ${{ secrets.GISD_TOKEN }}"

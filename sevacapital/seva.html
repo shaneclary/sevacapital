@@ -1,0 +1,1246 @@
+<!DOCTYPE html><html lang="en"><head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="gsid:alignment" content="2025-11-16"/>
+    <link rel="external" href="https://www.un.org/gsa/sites/www.un.org.gsa/files/2024-07/GISD%20Alliance%20Guidance%20on%20Sovereign%20SDG%20Bonds-FINAL.pdf"/>
+    <title>Maximizing Global Impact: A Strategic Proposal for the Seva Foundation</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Canela+Deck:wght@300;400;700&amp;family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+    <style>
+        :root {
+            --primary: #1e3a2e;
+            --secondary: #2d5a3d;
+            --accent: #4a7c59;
+            --light: #f8f9fa;
+            --dark: #212529;
+            --muted: #6c757d;
+        }
+        
+        .font-display { font-family: 'Canela Deck', serif; }
+        .font-body { font-family: 'Inter', sans-serif; }
+
+        .global-nav {
+            width: 100%;
+            background: linear-gradient(90deg, rgba(16,59,45,0.97), rgba(28,93,63,0.94));
+            color: #f8fff6;
+            padding: 0.85rem 2rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            box-shadow: 0 10px 30px rgba(11, 35, 25, 0.35);
+            position: sticky;
+            top: 0;
+            z-index: 2000;
+        }
+
+        .nav-brand {
+            font-weight: 700;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            font-size: 0.9rem;
+        }
+
+        .nav-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.25rem;
+            font-weight: 500;
+            font-size: 0.95rem;
+        }
+
+        .nav-links a {
+            color: rgba(255,255,255,0.78);
+            text-decoration: none;
+            padding-bottom: 0.15rem;
+            border-bottom: 2px solid transparent;
+            transition: all 0.2s ease;
+        }
+
+        .nav-links a:hover,
+        .nav-links a.active {
+            color: #ffffff;
+            border-bottom-color: #9fe6c3;
+        }
+        
+        .hero-gradient {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 50%, var(--accent) 100%);
+        }
+        
+        .bento-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            grid-template-rows: auto auto;
+            gap: 2rem;
+            height: 60vh;
+        }
+        
+        .bento-main {
+            grid-row: 1 / -1;
+            background: linear-gradient(45deg, rgba(30,58,46,0.9), rgba(74,124,89,0.8));
+            border-radius: 1rem;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .bento-side-1 {
+            background: var(--light);
+            border-radius: 1rem;
+            padding: 2rem;
+            border: 1px solid #e9ecef;
+        }
+        
+        .bento-side-2 {
+            background: var(--accent);
+            border-radius: 1rem;
+            padding: 2rem;
+            color: white;
+        }
+        
+        .toc-fixed {
+            position: fixed;
+            left: 2rem;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 280px;
+            background: white;
+            border-radius: 1rem;
+            padding: 2rem;
+            box-shadow: 0 20px 25px -5px rgba(0,0,0,0.1);
+            border: 1px solid #e9ecef;
+            z-index: 1000;
+            max-height: 70vh;
+            overflow-y: auto;
+        }
+        
+        .content-main {
+            margin-left: 320px;
+            padding-right: 2rem;
+        }
+        
+        .citation {
+            display: inline-block;
+            background: var(--accent);
+            color: white;
+            padding: 0.2rem 0.5rem;
+            border-radius: 0.25rem;
+            text-decoration: none;
+            font-size: 0.75rem;
+            margin-left: 0.25rem;
+            transition: all 0.2s ease;
+        }
+        
+        .citation:hover {
+            background: var(--secondary);
+            transform: translateY(-1px);
+        }
+        
+        .insight-highlight {
+            background: linear-gradient(120deg, rgba(74,124,89,0.1) 0%, rgba(74,124,89,0.05) 100%);
+            border-left: 4px solid var(--accent);
+            padding: 1.5rem;
+            margin: 2rem 0;
+            border-radius: 0 0.5rem 0.5rem 0;
+        }
+        
+        .stat-card {
+            background: white;
+            border-radius: 1rem;
+            padding: 2rem;
+            box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1);
+            border: 1px solid #e9ecef;
+            transition: all 0.3s ease;
+        }
+        
+        .stat-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px -5px rgba(0,0,0,0.1);
+        }
+        
+        @media (max-width: 1280px) {
+            .toc-fixed {
+                display: none;
+            }
+            .content-main {
+                margin-left: 0;
+                padding: 0 2rem;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .bento-grid {
+                grid-template-columns: 1fr;
+                grid-template-rows: auto auto auto;
+                height: auto;
+            }
+            .bento-main {
+                grid-row: auto;
+                padding: 1.5rem;
+            }
+            .bento-main h1 {
+                font-size: 2.25rem;
+                line-height: 2.5rem;
+            }
+            .bento-main p {
+                font-size: 1rem;
+            }
+            .content-main {
+                padding: 0 1rem;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .bento-main h1 {
+                font-size: 1.75rem;
+                line-height: 2rem;
+            }
+            .bento-main p {
+                font-size: 0.9rem;
+            }
+        }
+        
+        .section-divider {
+            height: 1px;
+            background: linear-gradient(90deg, transparent 0%, var(--accent) 50%, transparent 100%);
+            margin: 4rem 0;
+        }
+    </style>
+  <base target="_blank">
+</head>
+
+  <body class="font-body bg-gray-50">
+    <nav class="global-nav">
+      <div class="nav-brand">Capital for Seva</div>
+      <div class="nav-links">
+        <a href="seva.html" class="active">Strategy Dossier</a>
+        <a href="pitch.html">Investor Pitch</a>
+        <a href="investor_portal.html">Investor Portal</a>
+        <a href="projectweaver.html">Project Weaver</a>
+        <a href="icma.html">ICMA Framework</a>
+        <a href="gisd-compliance.html">GISD Alignment</a>
+      </div>
+    </nav>
+    <div class="text-center text-xs tracking-[0.25em] uppercase bg-emerald-50 text-emerald-800 py-2 border-b border-emerald-100">
+      Independent capital syndicate raising institutional funds on behalf of Seva Foundation
+    </div>
+    <!-- Table of Contents - Fixed Left Side -->
+    <nav class="toc-fixed">
+      <h3 class="font-display font-bold text-lg mb-4 text-gray-800">Contents</h3>
+      <ul class="space-y-2 text-sm">
+        <li>
+          <a href="#executive-summary" class="text-gray-600 hover:text-primary transition-colors">Executive Summary</a>
+        </li>
+        <li>
+          <a href="#strategic-pillars" class="text-gray-600 hover:text-primary transition-colors">Strategic Pillars</a>
+        </li>
+        <li>
+          <a href="#kpis" class="text-gray-600 hover:text-primary transition-colors">Key Performance Indicators</a>
+        </li>
+        <li>
+          <a href="#financial-overview" class="text-gray-600 hover:text-primary transition-colors">Financial Overview</a>
+        </li>
+        <li>
+          <a href="#focal-regions" class="text-gray-600 hover:text-primary transition-colors">Strategic Focal Regions</a>
+        </li>
+        <li>
+          <a href="#scaling-programs" class="text-gray-600 hover:text-primary transition-colors">Scaling Existing Programs</a>
+        </li>
+        <li>
+          <a href="#new-technologies" class="text-gray-600 hover:text-primary transition-colors">New Technologies</a>
+        </li>
+        <li>
+          <a href="#fundraising" class="text-gray-600 hover:text-primary transition-colors">Fundraising Enhancement</a>
+        </li>
+        <li>
+          <a href="#partnerships" class="text-gray-600 hover:text-primary transition-colors">Strategic Partnerships</a>
+        </li>
+        <li>
+          <a href="#budget-projections" class="text-gray-600 hover:text-primary transition-colors">Budget Projections</a>
+        </li>
+      </ul>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="content-main">
+      <!-- Hero Section with Bento Grid -->
+      <section class="mb-16">
+        <div class="bento-grid mb-8">
+          <!-- Main Hero Panel -->
+          <div class="bento-main flex items-center justify-center text-white p-8">
+            <div class="text-center max-w-2xl">
+              <h1 class="font-display text-4xl lg:text-6xl font-light mb-6 leading-tight">
+                <em>Maximizing Global Impact</em>
+              </h1>
+              <p class="text-xl lg:text-2xl font-light opacity-90 mb-8">
+                A Strategic Proposal for the Seva Foundation
+              </p>
+              <div class="flex items-center justify-center space-x-4 text-sm opacity-75">
+                <span><i class="fas fa-eye mr-2"></i>Vision Restoration</span>
+                <span>•</span>
+                <span><i class="fas fa-globe mr-2"></i>Global Scale</span>
+                <span>•</span>
+                <span><i class="fas fa-chart-line mr-2"></i>$36:1 ROI</span>
+              </div>
+            </div>
+            <img src="https://kimi-web-img.moonshot.cn/img/medicine.utah.edu/8b6ca84a5ea1408785918bdf7203b9cd47724eb1.jpg" alt="Global eye care outreach" class="absolute inset-0 w-full h-full object-cover opacity-20" size="wallpaper" aspect="wide" style="photo" query="global eye care" referrerpolicy="no-referrer" data-modified="1" data-score="0.00"/>
+          </div>
+
+          <!-- Side Panel 1 -->
+          <div class="bento-side-1">
+            <h3 class="font-display font-bold text-xl mb-4 text-gray-800">Key Metrics</h3>
+            <div class="space-y-4">
+              <div class="flex justify-between items-center">
+                <span class="text-gray-600">5-Year Budget</span>
+                <span class="font-bold text-lg text-primary">$153.3M</span>
+              </div>
+              <div class="flex justify-between items-center">
+                <span class="text-gray-600">ROI Multiple</span>
+                <span class="font-bold text-lg text-primary">36:1</span>
+              </div>
+              <div class="flex justify-between items-center">
+                <span class="text-gray-600">Social Return</span>
+                <span class="font-bold text-lg text-primary">$5.5B</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Side Panel 2 -->
+          <div class="bento-side-2">
+            <h3 class="font-display font-bold text-xl mb-4">Impact Goals</h3>
+            <div class="space-y-3">
+              <div class="flex items-center">
+                <i class="fas fa-hospital mr-3 text-xl"></i>
+                <span>200 New Vision Centers</span>
+              </div>
+              <div class="flex items-center">
+                <i class="fas fa-user-md mr-3 text-xl"></i>
+                <span>1M Cataract Surgeries</span>
+              </div>
+              <div class="flex items-center">
+                <i class="fas fa-users mr-3 text-xl"></i>
+                <span>15M People Served</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Executive Summary -->
+      <section id="executive-summary" class="mb-16">
+        <h2 class="font-display text-4xl font-bold mb-8 text-gray-800">Executive Summary: The Path Forward for Seva</h2>
+
+        <div class="insight-highlight">
+          <h3 class="font-display text-xl font-bold mb-3 text-primary">Core Recommendation</h3>
+          <p class="text-lg leading-relaxed">
+            To maximize its global impact, the Seva Foundation should pursue a phased, data-driven expansion focused on scaling its proven, cost-effective models in high-need regions. The most successful path forward involves a dual strategy: first, deepening impact in established programs in <strong>India</strong> and <strong>Guatemala</strong> by scaling the Vision Center and Global Sight Initiative models; and second, strategically expanding into high-potential areas in <strong>Sub-Saharan Africa</strong> and <strong>South Asia</strong>.
+          </p>
+        </div>
+
+        <div class="grid md:grid-cols-2 gap-8 mb-8">
+          <div class="stat-card">
+            <h4 class="font-display text-xl font-bold mb-4 text-primary">Proven Track Record</h4>
+            <p class="text-gray-600 mb-4">Seva has nearly 50 years of experience building sustainable, locally-led programs with scientific rigor and cultural sensitivity<a href="#ref-245" class="citation">245</a>.</p>
+            <div class="flex items-center text-sm text-gray-500">
+              <i class="fas fa-chart-bar mr-2"></i>
+              <span>Tracking 120+ performance indicators across 20+ countries</span>
+              <a href="#ref-231" class="citation">231</a>
+              <a href="#ref-265" class="citation">265</a>
+            </div>
+          </div>
+
+          <div class="stat-card">
+            <h4 class="font-display text-xl font-bold mb-4 text-primary">Vision Center Impact</h4>
+            <p class="text-gray-600 mb-4">Each Vision Center creates immediate access to eye care for 50,000-500,000 people, treating 3,600 patients annually<a href="#ref-258" class="citation">258</a>.</p>
+            <div class="flex items-center text-sm text-gray-500">
+              <i class="fas fa-users mr-2"></i>
+              <span>170 VCs established across 12 countries in 5 years</span>
+              <a href="#ref-243" class="citation">243</a>
+            </div>
+          </div>
+        </div>
+
+        <p class="text-lg leading-relaxed mb-6">
+          This expansion will be supported by integrating new technologies like mobile health and AI diagnostics, diversifying funding through corporate and high-net-worth donor partnerships, and strengthening the &#34;hub-and-spoke&#34; model with local hospitals. With a projected five-year budget of <strong>$153.3 million</strong>, this strategy can leverage Seva&#39;s exceptional <strong>$1:$36 return on investment</strong> to generate over <strong>$5.5 billion</strong> in social and economic benefits, restoring sight to millions and building sustainable eye care systems worldwide.
+        </p>
+      </section>
+
+      <div class="section-divider"></div>
+
+      <!-- Strategic Pillars -->
+      <section id="strategic-pillars" class="mb-16">
+        <h2 class="font-display text-4xl font-bold mb-8 text-gray-800">Strategic Pillars for Maximizing Impact</h2>
+
+        <div class="grid md:grid-cols-2 gap-8">
+          <div class="stat-card">
+            <div class="flex items-center mb-4">
+              <div class="w-12 h-12 bg-primary rounded-full flex items-center justify-center mr-4">
+                <i class="fas fa-hospital text-white text-lg"></i>
+              </div>
+              <h3 class="font-display text-xl font-bold text-primary">Scaling Vision Centers</h3>
+            </div>
+            <p class="text-gray-600 mb-4">
+              Permanent, local establishments designed to meet 80% of all eye care needs in a single visit, from basic screenings to eyeglasses provision<a href="#ref-258" class="citation">258</a>.
+            </p>
+            <div class="bg-gray-50 p-3 rounded-lg">
+              <div class="flex justify-between items-center text-sm">
+                <span class="text-gray-600">People served per VC:</span>
+                <span class="font-bold text-primary">50K-500K</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="stat-card">
+            <div class="flex items-center mb-4">
+              <div class="w-12 h-12 bg-secondary rounded-full flex items-center justify-center mr-4">
+                <i class="fas fa-microscope text-white text-lg"></i>
+              </div>
+              <h3 class="font-display text-xl font-bold text-primary">Technology Integration</h3>
+            </div>
+            <p class="text-gray-600 mb-4">
+              Investing in innovative technologies like the Vistaro wide-field retinal camera and InSight Learning Platform for improved diagnostics and training<a href="#ref-258" class="citation">258</a>
+              <a href="#ref-247" class="citation">247</a>.
+            </p>
+            <div class="bg-gray-50 p-3 rounded-lg">
+              <div class="flex justify-between items-center text-sm">
+                <span class="text-gray-600">Tech pilots planned:</span>
+                <span class="font-bold text-primary">5 new technologies</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="stat-card">
+            <div class="flex items-center mb-4">
+              <div class="w-12 h-12 bg-accent rounded-full flex items-center justify-center mr-4">
+                <i class="fas fa-handshake text-white text-lg"></i>
+              </div>
+              <h3 class="font-display text-xl font-bold text-primary">Funding Diversification</h3>
+            </div>
+            <p class="text-gray-600 mb-4">
+              Reducing reliance on individual donors (85-90% of revenue) through corporate partnerships, foundation grants, and high-net-worth donors<a href="#ref-181" class="citation">181</a>.
+            </p>
+            <div class="bg-gray-50 p-3 rounded-lg">
+              <div class="flex justify-between items-center text-sm">
+                <span class="text-gray-600">Target non-individual revenue:</span>
+                <span class="font-bold text-primary">30%</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="stat-card">
+            <div class="flex items-center mb-4">
+              <div class="w-12 h-12 bg-primary rounded-full flex items-center justify-center mr-4">
+                <i class="fas fa-chart-line text-white text-lg"></i>
+              </div>
+              <h3 class="font-display text-xl font-bold text-primary">Quality Assurance</h3>
+            </div>
+            <p class="text-gray-600 mb-4">
+              Enhancing data systems to track 150 performance indicators and ensure 100% of partner hospitals achieve quality assurance certification<a href="#ref-230" class="citation">230</a>
+              <a href="#ref-231" class="citation">231</a>.
+            </p>
+            <div class="bg-gray-50 p-3 rounded-lg">
+              <div class="flex justify-between items-center text-sm">
+                <span class="text-gray-600">Patient satisfaction increase:</span>
+                <span class="font-bold text-primary">15%</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div class="section-divider"></div>
+
+      <!-- KPIs Section -->
+      <section id="kpis" class="mb-16">
+        <h2 class="font-display text-4xl font-bold mb-8 text-gray-800">Key Performance Indicators (KPIs) for Success</h2>
+
+        <div class="bg-white rounded-2xl shadow-lg overflow-hidden">
+          <div class="bg-gradient-to-r from-primary to-secondary text-white p-6">
+            <h3 class="font-display text-2xl font-bold">Five-Year Performance Targets</h3>
+            <p class="opacity-90 mt-2">SMART goals aligned with Seva&#39;s mission to transform lives and strengthen communities</p>
+          </div>
+          <div class="p-6">
+            <div class="overflow-x-auto">
+              <table class="w-full">
+                <thead>
+                  <tr class="border-b-2 border-gray-200">
+                    <th class="text-left py-4 px-4 font-display font-bold text-primary">Strategic Pillar</th>
+                    <th class="text-left py-4 px-4 font-display font-bold text-primary">Key Performance Indicator</th>
+                    <th class="text-left py-4 px-4 font-display font-bold text-primary">Target (5-Year)</th>
+                  </tr>
+                </thead>
+                <tbody class="divide-y divide-gray-100">
+                  <tr class="hover:bg-gray-50 transition-colors">
+                    <td class="py-4 px-4 font-medium text-gray-800">Vision Center Model</td>
+                    <td class="py-4 px-4 text-gray-600">Number of new Vision Centers established</td>
+                    <td class="py-4 px-4 font-bold text-primary">200</td>
+                  </tr>
+                  <tr class="hover:bg-gray-50 transition-colors">
+                    <td class="py-4 px-4 font-medium text-gray-800">Vision Center Model</td>
+                    <td class="py-4 px-4 text-gray-600">People with access to eye care through new VCs</td>
+                    <td class="py-4 px-4 font-bold text-primary">10 million</td>
+                  </tr>
+                  <tr class="hover:bg-gray-50 transition-colors">
+                    <td class="py-4 px-4 font-medium text-gray-800">Technology Integration</td>
+                    <td class="py-4 px-4 text-gray-600">New technologies piloted and scaled</td>
+                    <td class="py-4 px-4 font-bold text-primary">5</td>
+                  </tr>
+                  <tr class="hover:bg-gray-50 transition-colors">
+                    <td class="py-4 px-4 font-medium text-gray-800">Technology Integration</td>
+                    <td class="py-4 px-4 text-gray-600">Health professionals trained on new technologies</td>
+                    <td class="py-4 px-4 font-bold text-primary">1,000</td>
+                  </tr>
+                  <tr class="hover:bg-gray-50 transition-colors">
+                    <td class="py-4 px-4 font-medium text-gray-800">Funding Diversification</td>
+                    <td class="py-4 px-4 text-gray-600">Revenue from non-individual donors</td>
+                    <td class="py-4 px-4 font-bold text-primary">30%</td>
+                  </tr>
+                  <tr class="hover:bg-gray-50 transition-colors">
+                    <td class="py-4 px-4 font-medium text-gray-800">Quality Assurance</td>
+                    <td class="py-4 px-4 text-gray-600">Partner hospitals with QA certification</td>
+                    <td class="py-4 px-4 font-bold text-primary">100%</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div class="section-divider"></div>
+
+      <!-- Financial Overview -->
+      <section id="financial-overview" class="mb-16">
+        <h2 class="font-display text-4xl font-bold mb-8 text-gray-800">Financial Overview and ROI Projections</h2>
+
+        <div class="grid md:grid-cols-3 gap-8 mb-8">
+          <div class="stat-card bg-gradient-to-br from-primary to-secondary text-white">
+            <h3 class="font-display text-xl font-bold mb-4">Total Investment</h3>
+            <div class="text-4xl font-bold mb-2">$153.3M</div>
+            <p class="opacity-90 text-sm">Five-year program budget</p>
+          </div>
+
+          <div class="stat-card bg-gradient-to-br from-accent to-secondary text-white">
+            <h3 class="font-display text-xl font-bold mb-4">Social Return</h3>
+            <div class="text-4xl font-bold mb-2">$5.5B</div>
+            <p class="opacity-90 text-sm">Projected economic value generated</p>
+          </div>
+
+          <div class="stat-card bg-gradient-to-br from-primary to-accent text-white">
+            <h3 class="font-display text-xl font-bold mb-4">ROI Multiple</h3>
+            <div class="text-4xl font-bold mb-2">36:1</div>
+            <p class="opacity-90 text-sm">Every $1 invested yields $36 in benefits<a href="#ref-245" class="citation">245</a>
+              <a href="#ref-280" class="citation">280</a>
+            </p>
+          </div>
+        </div>
+
+        <div class="insight-highlight">
+          <h3 class="font-display text-xl font-bold mb-3 text-primary">Economic Impact Analysis</h3>
+          <p class="text-lg leading-relaxed mb-4">
+            Seva&#39;s research shows that vision loss robs low- and middle-income countries of an estimated <strong>$1 trillion in productivity each year</strong>
+            <a href="#ref-468" class="citation">468</a>. Simple interventions like a <strong>$6 pair of glasses</strong> or <strong>$50 cataract surgery</strong> can unlock decades of opportunity<a href="#ref-463" class="citation">463</a>.
+          </p>
+          <p class="text-gray-600">
+            Children who receive glasses in grade school can earn up to <strong>78% more over their lifetime</strong>
+            <a href="#ref-458" class="citation">458</a>. The World Bank recognizes cataract surgery as one of the most cost-effective health interventions globally<a href="#ref-485" class="citation">485</a>.
+          </p>
+        </div>
+      </section>
+
+      <div class="section-divider"></div>
+
+      <!-- Strategic Focal Regions -->
+      <section id="focal-regions" class="mb-16">
+        <h2 class="font-display text-4xl font-bold mb-8 text-gray-800">Strategic Focal Regions for High-Impact Intervention</h2>
+
+        <div class="grid md:grid-cols-2 gap-8 mb-12">
+          <div class="stat-card">
+            <div class="flex items-center mb-6">
+              <div class="w-16 h-16 bg-primary rounded-full flex items-center justify-center mr-4">
+                <i class="fas fa-star text-white text-2xl"></i>
+              </div>
+              <div>
+                <h3 class="font-display text-2xl font-bold text-primary">Tier 1 Priority</h3>
+                <p class="text-gray-600">Scale Proven Models</p>
+              </div>
+            </div>
+
+            <div class="space-y-6">
+              <div class="border-l-4 border-primary pl-4">
+                <h4 class="font-display text-lg font-bold mb-2">India</h4>
+                <p class="text-gray-600 text-sm mb-2">
+                  Deepening impact in the world&#39;s largest eye care market. Partnership with Aravind Eye Care System has revolutionized cataract surgery, bringing costs down to $50 per procedure<a href="#ref-479" class="citation">479</a>.
+                </p>
+                <div class="flex items-center text-sm text-gray-500">
+                  <i class="fas fa-clock mr-2"></i>
+                  <span>Surgeons perform 6-8 procedures per hour<a href="#ref-351" class="citation">351</a></span>
+                </div>
+              </div>
+
+              <div class="border-l-4 border-secondary pl-4">
+                <h4 class="font-display text-lg font-bold mb-2">Guatemala</h4>
+                <p class="text-gray-600 text-sm mb-2">
+                  &#34;Guatemala Brillando&#34; initiative aims to eliminate preventable blindness nationwide by 2032 through Visualiza partnership<a href="#ref-458" class="citation">458</a>
+                  <a href="#ref-462" class="citation">462</a>.
+                </p>
+                <div class="flex items-center text-sm text-gray-500">
+                  <i class="fas fa-handshake mr-2"></i>
+                  <span>Cross-subsidization model: 20% paying patients support 80% free/low-cost care<a href="#ref-351" class="citation">351</a></span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="stat-card">
+            <div class="flex items-center mb-6">
+              <div class="w-16 h-16 bg-accent rounded-full flex items-center justify-center mr-4">
+                <i class="fas fa-rocket text-white text-2xl"></i>
+              </div>
+              <div>
+                <h3 class="font-display text-2xl font-bold text-primary">Tier 2 Priority</h3>
+                <p class="text-gray-600">Expand to High-Need Areas</p>
+              </div>
+            </div>
+
+            <div class="space-y-6">
+              <div class="border-l-4 border-accent pl-4">
+                <h4 class="font-display text-lg font-bold mb-2">Sub-Saharan Africa</h4>
+                <p class="text-gray-600 text-sm mb-2">
+                  Addressing severe shortage: as few as 1 ophthalmologist per million people. Cataract surgery costs as low as $13 in NGO programs<a href="#ref-485" class="citation">485</a>.
+                </p>
+                <div class="flex items-center text-sm text-gray-500">
+                  <i class="fas fa-truck-medical mr-2"></i>
+                  <span>Mobile surgical units to reach remote areas</span>
+                </div>
+              </div>
+
+              <div class="border-l-4 border-primary pl-4">
+                <h4 class="font-display text-lg font-bold mb-2">South Asia &amp; Southeast Asia</h4>
+                <p class="text-gray-600 text-sm mb-2">
+                  Leveraging regional expertise from India to support Bangladesh, Nepal, Pakistan, Vietnam, Cambodia, and Myanmar.
+                </p>
+                <div class="flex items-center text-sm text-gray-500">
+                  <i class="fas fa-globe-asia mr-2"></i>
+                  <span>High rural populations with limited eye care access</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Regional Cost Analysis -->
+        <div class="bg-white rounded-2xl shadow-lg overflow-hidden">
+          <div class="bg-gradient-to-r from-primary to-accent text-white p-6">
+            <h3 class="font-display text-2xl font-bold">Regional Cost Analysis: Cataract Surgery Benchmarks</h3>
+            <p class="opacity-90 mt-2">Understanding cost variations to optimize resource allocation</p>
+          </div>
+          <div class="p-6">
+            <div class="overflow-x-auto">
+              <table class="w-full">
+                <thead>
+                  <tr class="border-b-2 border-gray-200">
+                    <th class="text-left py-4 px-4 font-display font-bold text-primary">Region/Program</th>
+                    <th class="text-left py-4 px-4 font-display font-bold text-primary">Cost per Surgery (USD)</th>
+                    <th class="text-left py-4 px-4 font-display font-bold text-primary">Key Characteristics</th>
+                  </tr>
+                </thead>
+                <tbody class="divide-y divide-gray-100">
+                  <tr class="hover:bg-gray-50 transition-colors">
+                    <td class="py-4 px-4 font-medium text-gray-800">Nepal (Public Health)</td>
+                    <td class="py-4 px-4 font-bold text-green-600">$21.71</td>
+                    <td class="py-4 px-4 text-gray-600 text-sm">Highly subsidized public program<a href="#ref-80" class="citation">80</a>
+                    </td>
+                  </tr>
+                  <tr class="hover:bg-gray-50 transition-colors">
+                    <td class="py-4 px-4 font-medium text-gray-800">Seva Global Average</td>
+                    <td class="py-4 px-4 font-bold text-primary">$50.00</td>
+                    <td class="py-4 px-4 text-gray-600 text-sm">Standard benchmark<a href="#ref-455" class="citation">455</a>
+                    </td>
+                  </tr>
+                  <tr class="hover:bg-gray-50 transition-colors">
+                    <td class="py-4 px-4 font-medium text-gray-800">Guatemala (Visualiza)</td>
+                    <td class="py-4 px-4 font-bold text-orange-600">~$65.00</td>
+                    <td class="py-4 px-4 text-gray-600 text-sm">High-efficiency Aravind model<a href="#ref-351" class="citation">351</a>
+                    </td>
+                  </tr>
+                  <tr class="hover:bg-gray-50 transition-colors">
+                    <td class="py-4 px-4 font-medium text-gray-800">Humanitarian Mission</td>
+                    <td class="py-4 px-4 font-bold text-red-600">$276.00</td>
+                    <td class="py-4 px-4 text-gray-600 text-sm">Includes travel and logistics<a href="#ref-492" class="citation">492</a>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div class="section-divider"></div>
+
+      <!-- Scaling Existing Programs -->
+      <section id="scaling-programs" class="mb-16">
+        <h2 class="font-display text-4xl font-bold mb-8 text-gray-800">Strategy 1: Scaling Existing High-Impact Programs</h2>
+
+        <div class="grid md:grid-cols-2 gap-8 mb-8">
+          <div class="stat-card">
+            <h3 class="font-display text-2xl font-bold mb-6 text-primary">Vision Center Model</h3>
+            <img src="https://kimi-web-img.moonshot.cn/img/www.verywellhealth.com/3b297b4ef5742cec48fea3f76e18d7d3ad1535d6.jpg" alt="Modern vision center interior with eye examination equipment" class="w-full h-48 object-cover rounded-lg mb-4" size="medium" aspect="wide" style="photo" query="vision center interior" referrerpolicy="no-referrer" data-modified="1" data-score="0.00"/>
+            <p class="text-gray-600 mb-4">
+              Proven success with over <strong>7.6 million people served</strong> in 2023-2024, nearly tripling annual reach over five years<a href="#ref-339" class="citation">339</a>. Each center serves as a community hub for screenings, diagnosis, and referrals.
+            </p>
+            <div class="bg-gray-50 p-4 rounded-lg">
+              <h4 class="font-bold mb-2">Scaling Plan: 200 New VCs in 5 Years</h4>
+              <ul class="text-sm text-gray-600 space-y-1">
+                <li>• Strategic focus: India, Sub-Saharan Africa, Southeast Asia</li>
+                <li>• Local partnerships for cultural adaptation</li>
+                <li>• Sustainable, self-sufficient operations model</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="stat-card">
+            <h3 class="font-display text-2xl font-bold mb-6 text-primary">Global Sight Initiative</h3>
+            <img src="https://kimi-web-img.moonshot.cn/img/medpharo.com/d08cc814133f6b8198c972a84c17c962e6eae8a8.jpg" alt="Eye hospital operating room in Guatemala" class="w-full h-48 object-cover rounded-lg mb-4" size="medium" aspect="wide" style="photo" query="eye hospital operating room Guatemala" referrerpolicy="no-referrer" data-modified="1" data-score="0.00"/>
+            <p class="text-gray-600 mb-4">
+              Guatemala Brillando initiative: 10-year plan to eliminate preventable blindness by 2032 through <strong>5 new regional hospitals and 30 community vision centers</strong>
+              <a href="#ref-409" class="citation">409</a>
+              <a href="#ref-410" class="citation">410</a>.
+            </p>
+            <div class="bg-gray-50 p-4 rounded-lg">
+              <h4 class="font-bold mb-2">High-Volume Efficiency</h4>
+              <p class="text-sm text-gray-600">
+                Surgeons perform <strong>6-8 procedures per hour</strong> using innovative techniques, with 12 vision centers already operational<a href="#ref-429" class="citation">429</a>
+                <a href="#ref-417" class="citation">417</a>.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="insight-highlight">
+          <h3 class="font-display text-xl font-bold mb-3 text-primary">Community Health Worker Integration</h3>
+          <p class="text-lg leading-relaxed mb-4">
+            Expanding local capacity through CHW training programs for screening and referrals. Integration into primary healthcare systems creates sustainable, culturally appropriate care delivery<a href="#ref-391" class="citation">391</a>.
+          </p>
+          <div class="grid md:grid-cols-2 gap-4 text-sm">
+            <div>
+              <strong class="text-primary">Training Focus:</strong>
+              <ul class="mt-2 space-y-1 text-gray-600">
+                <li>• Basic eye anatomy and common diseases</li>
+                <li>• Screening techniques and referral protocols</li>
+                <li>• Community education and counseling skills</li>
+              </ul>
+            </div>
+            <div>
+              <strong class="text-primary">System Integration:</strong>
+              <ul class="mt-2 space-y-1 text-gray-600">
+                <li>• Clear referral pathways</li>
+                <li>• Ongoing supervision and support</li>
+                <li>• Recognition as valued healthcare team members</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div class="section-divider"></div>
+
+      <!-- New Technologies -->
+      <section id="new-technologies" class="mb-16">
+        <h2 class="font-display text-4xl font-bold mb-8 text-gray-800">Strategy 2: Introducing and Leveraging New Technologies</h2>
+
+        <div class="grid md:grid-cols-3 gap-8 mb-8">
+          <div class="stat-card">
+            <div class="w-12 h-12 bg-primary rounded-full flex items-center justify-center mb-4">
+              <i class="fas fa-mobile-alt text-white text-xl"></i>
+            </div>
+            <h3 class="font-display text-xl font-bold mb-3 text-primary">Mobile Health Apps</h3>
+            <p class="text-gray-600 text-sm mb-3">
+              mHealth applications for data collection, screening management, and patient referrals. Partner app in India screened over 1 million people<a href="#ref-98" class="citation">98</a>.
+            </p>
+            <div class="bg-gray-50 p-3 rounded text-xs">
+              <strong>Impact:</strong> Streamlined screening, improved data quality, immediate referral integration
+            </div>
+          </div>
+
+          <div class="stat-card">
+            <div class="w-12 h-12 bg-secondary rounded-full flex items-center justify-center mb-4">
+              <i class="fas fa-robot text-white text-xl"></i>
+            </div>
+            <h3 class="font-display text-xl font-bold mb-3 text-primary">AI-Powered Diagnostics</h3>
+            <p class="text-gray-600 text-sm mb-3">
+              Tools for cataract recognition and grading to increase screening efficiency and reduce clinician workload.
+            </p>
+            <div class="bg-gray-50 p-3 rounded text-xs">
+              <strong>Benefits:</strong> Enhanced accuracy, consistency, and accessibility in remote areas
+            </div>
+          </div>
+
+          <div class="stat-card">
+            <div class="w-12 h-12 bg-accent rounded-full flex items-center justify-center mb-4">
+              <i class="fas fa-camera text-white text-xl"></i>
+            </div>
+            <h3 class="font-display text-xl font-bold mb-3 text-primary">Portable Equipment</h3>
+            <p class="text-gray-600 text-sm mb-3">
+              Vistaro wide-field retinal camera for detecting diabetic retinopathy and other posterior eye conditions<a href="#ref-258" class="citation">258</a>.
+            </p>
+            <div class="bg-gray-50 p-3 rounded text-xs">
+              <strong>Deployment:</strong> Field-tested in India, Ukraine, Thailand, and Mozambique
+            </div>
+          </div>
+        </div>
+
+        <div class="insight-highlight">
+          <h3 class="font-display text-xl font-bold mb-3 text-primary">Surgical Efficiency Enhancement</h3>
+          <div class="grid md:grid-cols-2 gap-6">
+            <div>
+              <h4 class="font-bold mb-2">High-Volume Techniques</h4>
+              <p class="text-gray-600 text-sm mb-2">
+                Manual Small Incision Cataract Surgery (MSICS) - safe, effective, low-cost alternative to phacoemulsification.
+              </p>
+              <div class="bg-white p-3 rounded border-l-4 border-primary">
+                <div class="text-2xl font-bold text-primary">6-8</div>
+                <div class="text-sm text-gray-600">Procedures per hour per surgeon</div>
+              </div>
+            </div>
+            <div>
+              <h4 class="font-bold mb-2">Mobile Surgical Units</h4>
+              <p class="text-gray-600 text-sm mb-2">
+                Operating rooms on wheels to bring cataract surgery to remote areas, reducing travel barriers and costs.
+              </p>
+              <div class="bg-white p-3 rounded border-l-4 border-secondary">
+                <div class="text-2xl font-bold text-secondary">100%</div>
+                <div class="text-sm text-gray-600">Same standard of care as fixed facilities</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div class="section-divider"></div>
+
+      <!-- Fundraising Strategy -->
+      <section id="fundraising" class="mb-16">
+        <h2 class="font-display text-4xl font-bold mb-8 text-gray-800">Strategy 3: Enhancing Fundraising Efficiency and Diversification</h2>
+
+        <div class="grid md:grid-cols-2 gap-8 mb-8">
+          <div class="stat-card">
+            <h3 class="font-display text-xl font-bold mb-4 text-primary">Current Landscape</h3>
+            <div class="space-y-4">
+              <div class="flex items-center justify-between p-4 bg-green-50 rounded-lg">
+                <div>
+                  <div class="font-bold text-lg text-green-700">$0.12</div>
+                  <div class="text-sm text-gray-600">Cost per dollar raised</div>
+                </div>
+                <i class="fas fa-chart-line text-green-600 text-2xl"></i>
+              </div>
+              <p class="text-gray-600 text-sm">
+                High efficiency achieved through donor stewardship, transparency, and cost-effective channels<a href="#ref-65" class="citation">65</a>.
+              </p>
+
+              <div class="bg-orange-50 p-4 rounded-lg">
+                <div class="flex items-center justify-between mb-2">
+                  <span class="font-bold text-orange-700">85-90%</span>
+                  <i class="fas fa-exclamation-triangle text-orange-600"></i>
+                </div>
+                <div class="text-sm text-gray-600">Revenue from individual donors creates vulnerability<a href="#ref-181" class="citation">181</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="stat-card">
+            <h3 class="font-display text-xl font-bold mb-4 text-primary">Diversification Strategy</h3>
+            <div class="space-y-3">
+              <div class="flex items-center p-3 bg-blue-50 rounded-lg">
+                <i class="fas fa-handshake text-blue-600 mr-3"></i>
+                <div>
+                  <div class="font-bold text-blue-700">Corporate Partnerships</div>
+                  <div class="text-xs text-gray-600">Like Standard Chartered &#34;Envision&#34; initiative<a href="#ref-258" class="citation">258</a>
+                  </div>
+                </div>
+              </div>
+              <div class="flex items-center p-3 bg-purple-50 rounded-lg">
+                <i class="fas fa-users text-purple-600 mr-3"></i>
+                <div>
+                  <div class="font-bold text-purple-700">High-Net-Worth Donors</div>
+                  <div class="text-xs text-gray-600">Personalized, sophisticated fundraising approach</div>
+                </div>
+              </div>
+              <div class="flex items-center p-3 bg-green-50 rounded-lg">
+                <i class="fas fa-building text-green-600 mr-3"></i>
+                <div>
+                  <div class="font-bold text-green-700">Foundation Grants</div>
+                  <div class="text-xs text-gray-600">Proactive grant seeking and relationship building</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="bg-white rounded-2xl shadow-lg p-8">
+          <h3 class="font-display text-2xl font-bold mb-6 text-primary">Digital Fundraising Optimization</h3>
+          <div class="grid md:grid-cols-3 gap-6">
+            <div class="text-center">
+              <div class="w-16 h-16 bg-primary rounded-full flex items-center justify-center mx-auto mb-4">
+                <i class="fas fa-chart-bar text-white text-xl"></i>
+              </div>
+              <h4 class="font-bold mb-2">Data-Driven Engagement</h4>
+              <p class="text-gray-600 text-sm">
+                Analyzing donor data for personalized communications and retention strategies.
+              </p>
+            </div>
+            <div class="text-center">
+              <div class="w-16 h-16 bg-secondary rounded-full flex items-center justify-center mx-auto mb-4">
+                <i class="fas fa-share-alt text-white text-xl"></i>
+              </div>
+              <h4 class="font-bold mb-2">Peer-to-Peer Fundraising</h4>
+              <p class="text-gray-600 text-sm">
+                Leveraging social networks through digital platforms for expanded reach.
+              </p>
+            </div>
+            <div class="text-center">
+              <div class="w-16 h-16 bg-accent rounded-full flex items-center justify-center mx-auto mb-4">
+                <i class="fas fa-route text-white text-xl"></i>
+              </div>
+              <h4 class="font-bold mb-2">Optimized Donor Journeys</h4>
+              <p class="text-gray-600 text-sm">
+                Combating donor fatigue through seamless, engaging experiences.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div class="section-divider"></div>
+
+      <!-- Strategic Partnerships -->
+      <section id="partnerships" class="mb-16">
+        <h2 class="font-display text-4xl font-bold mb-8 text-gray-800">Strategy 4: Forging and Deepening Strategic Partnerships</h2>
+
+        <div class="grid md:grid-cols-2 gap-8 mb-8">
+          <div class="stat-card">
+            <h3 class="font-display text-2xl font-bold mb-6 text-primary">The Hub-and-Spoke Model</h3>
+            <img src="https://kimi-web-img.moonshot.cn/imagegen/20251116/0217632247004586701c75e44aa5c11ca5fd4df8d21a6f62439e5_0.jpeg" alt="Eye care hub and spoke model showing network of vision centers connected to hospitals" class="w-full h-48 object-cover rounded-lg mb-4" size="medium" aspect="wide" query="eye care hub and spoke model" referrerpolicy="no-referrer" data-modified="1" data-score="0.00"/>
+            <p class="text-gray-600 mb-4">
+              Partnering with local hospitals (hubs) and vision centers (spokes) to create sustainable networks. Success stories include Visualiza in Guatemala and Aravind in India<a href="#ref-351" class="citation">351</a>
+              <a href="#ref-429" class="citation">429</a>.
+            </p>
+            <div class="bg-gray-50 p-4 rounded-lg">
+              <h4 class="font-bold mb-2">Model Benefits</h4>
+              <ul class="text-sm text-gray-600 space-y-1">
+                <li>• Leverages existing infrastructure</li>
+                <li>• Builds local capacity and expertise</li>
+                <li>• Creates trust within communities</li>
+                <li>• Scalable across diverse contexts</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="stat-card">
+            <h3 class="font-display text-2xl font-bold mb-6 text-primary">Multi-Sectoral Alliances</h3>
+            <img src="https://kimi-web-img.moonshot.cn/img/cdn.who.int/9e24bbf772114577f649c7631d1dabf1f1799d1e.jpg" alt="International health partnership meeting" class="w-full h-48 object-cover rounded-lg mb-4" size="medium" aspect="wide" style="photo" query="global health partnership meeting" referrerpolicy="no-referrer" data-modified="1" data-score="0.00"/>
+            <div class="space-y-4">
+              <div class="border-l-4 border-blue-500 pl-4">
+                <h4 class="font-bold text-blue-700">Government Collaboration</h4>
+                <p class="text-gray-600 text-sm">Integrating eye care into national health plans and insurance schemes.</p>
+              </div>
+              <div class="border-l-4 border-green-500 pl-4">
+                <h4 class="font-bold text-green-700">NGO Partnerships</h4>
+                <p class="text-gray-600 text-sm">Broader health initiatives for comprehensive community care.</p>
+              </div>
+              <div class="border-l-4 border-purple-500 pl-4">
+                <h4 class="font-bold text-purple-700">Academic Engagement</h4>
+                <p class="text-gray-600 text-sm">Research, training, and evidence-based innovation.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="insight-highlight">
+          <h3 class="font-display text-xl font-bold mb-3 text-primary">Partner Support and Capacity Building</h3>
+          <div class="grid md:grid-cols-2 gap-6">
+            <div>
+              <h4 class="font-bold mb-3">Technical Assistance</h4>
+              <ul class="space-y-2 text-sm text-gray-600">
+                <li class="flex items-start">
+                  <i class="fas fa-check-circle text-green-500 mr-2 mt-1"></i>
+                  <span>Clinical training and quality assurance</span>
+                </li>
+                <li class="flex items-start">
+                  <i class="fas fa-check-circle text-green-500 mr-2 mt-1"></i>
+                  <span>Financial management and organizational development</span>
+                </li>
+                <li class="flex items-start">
+                  <i class="fas fa-check-circle text-green-500 mr-2 mt-1"></i>
+                  <span>Practical, hands-on training programs</span>
+                </li>
+              </ul>
+            </div>
+            <div>
+              <h4 class="font-bold mb-3">Quality Standards</h4>
+              <ul class="space-y-2 text-sm text-gray-600">
+                <li class="flex items-start">
+                  <i class="fas fa-check-circle text-blue-500 mr-2 mt-1"></i>
+                  <span>Standardized clinical protocols</span>
+                </li>
+                <li class="flex items-start">
+                  <i class="fas fa-check-circle text-blue-500 mr-2 mt-1"></i>
+                  <span>Quality assurance systems</span>
+                </li>
+                <li class="flex items-start">
+                  <i class="fas fa-check-circle text-blue-500 mr-2 mt-1"></i>
+                  <span>Peer-to-peer learning networks</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div class="section-divider"></div>
+
+      <!-- Budget Projections -->
+      <section id="budget-projections" class="mb-16">
+        <h2 class="font-display text-4xl font-bold mb-8 text-gray-800">Financial Projections and Funding Strategy</h2>
+
+        <div class="grid md:grid-cols-3 gap-8 mb-8">
+          <div class="stat-card">
+            <div class="w-16 h-16 bg-primary rounded-full flex items-center justify-center mx-auto mb-4">
+              <i class="fas fa-hospital text-white text-2xl"></i>
+            </div>
+            <h3 class="font-display text-xl font-bold text-center mb-4">Vision Centers</h3>
+            <div class="text-center mb-4">
+              <div class="text-3xl font-bold text-primary">$93.3M</div>
+              <div class="text-sm text-gray-600">1,867 new centers</div>
+            </div>
+            <div class="bg-gray-50 p-3 rounded text-sm">
+              <div class="text-green-600 font-bold">ROI: $3.36B</div>
+              <div class="text-xs text-gray-600">At 36:1 return ratio</div>
+            </div>
+          </div>
+
+          <div class="stat-card">
+            <div class="w-16 h-16 bg-secondary rounded-full flex items-center justify-center mx-auto mb-4">
+              <i class="fas fa-user-md text-white text-2xl"></i>
+            </div>
+            <h3 class="font-display text-xl font-bold text-center mb-4">Cataract Surgeries</h3>
+            <div class="text-center mb-4">
+              <div class="text-3xl font-bold text-secondary">$50M</div>
+              <div class="text-sm text-gray-600">1 million surgeries</div>
+            </div>
+            <div class="bg-gray-50 p-3 rounded text-sm">
+              <div class="text-green-600 font-bold">ROI: $1.8B</div>
+              <div class="text-xs text-gray-600">At 36:1 return ratio</div>
+            </div>
+          </div>
+
+          <div class="stat-card">
+            <div class="w-16 h-16 bg-accent rounded-full flex items-center justify-center mx-auto mb-4">
+              <i class="fas fa-microchip text-white text-2xl"></i>
+            </div>
+            <h3 class="font-display text-xl font-bold text-center mb-4">Technology &amp; Training</h3>
+            <div class="text-center mb-4">
+              <div class="text-3xl font-bold text-accent">$10M</div>
+              <div class="text-sm text-gray-600">New tech &amp; workforce</div>
+            </div>
+            <div class="bg-gray-50 p-3 rounded text-sm">
+              <div class="text-green-600 font-bold">ROI: $360M</div>
+              <div class="text-xs text-gray-600">At 36:1 return ratio</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="bg-white rounded-2xl shadow-lg overflow-hidden mb-8">
+          <div class="bg-gradient-to-r from-primary to-secondary text-white p-6">
+            <h3 class="font-display text-2xl font-bold">Blended Finance Approach</h3>
+            <p class="opacity-90 mt-2">Diversified funding strategy for financial sustainability</p>
+          </div>
+          <div class="p-6">
+            <div class="overflow-x-auto">
+              <table class="w-full">
+                <thead>
+                  <tr class="border-b-2 border-gray-200">
+                    <th class="text-left py-4 px-4 font-display font-bold text-primary">Funding Source</th>
+                    <th class="text-left py-4 px-4 font-display font-bold text-primary">Target %</th>
+                    <th class="text-left py-4 px-4 font-display font-bold text-primary">Target Amount</th>
+                    <th class="text-left py-4 px-4 font-display font-bold text-primary">Rationale</th>
+                  </tr>
+                </thead>
+                <tbody class="divide-y divide-gray-100">
+                  <tr class="hover:bg-gray-50 transition-colors">
+                    <td class="py-4 px-4 font-medium text-gray-800">Major Gifts &amp; Pledges</td>
+                    <td class="py-4 px-4 font-bold text-primary">40%</td>
+                    <td class="py-4 px-4 font-bold text-primary">$61.32M</td>
+                    <td class="py-4 px-4 text-gray-600 text-sm">Large-scale, long-term commitments from high-net-worth individuals</td>
+                  </tr>
+                  <tr class="hover:bg-gray-50 transition-colors">
+                    <td class="py-4 px-4 font-medium text-gray-800">Corporate &amp; Foundation Grants</td>
+                    <td class="py-4 px-4 font-bold text-secondary">30%</td>
+                    <td class="py-4 px-4 font-bold text-secondary">$45.99M</td>
+                    <td class="py-4 px-4 text-gray-600 text-sm">Strategic partnerships with mission-aligned organizations</td>
+                  </tr>
+                  <tr class="hover:bg-gray-50 transition-colors">
+                    <td class="py-4 px-4 font-medium text-gray-800">Individual Donations</td>
+                    <td class="py-4 px-4 font-bold text-accent">20%</td>
+                    <td class="py-4 px-4 font-bold text-accent">$30.66M</td>
+                    <td class="py-4 px-4 text-gray-600 text-sm">Stable base from loyal donors and monthly giving</td>
+                  </tr>
+                  <tr class="hover:bg-gray-50 transition-colors">
+                    <td class="py-4 px-4 font-medium text-gray-800">Innovative Finance</td>
+                    <td class="py-4 px-4 font-bold text-green-600">10%</td>
+                    <td class="py-4 px-4 font-bold text-green-600">$15.33M</td>
+                    <td class="py-4 px-4 text-gray-600 text-sm">Impact bonds and blended finance funds</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+
+        <div class="insight-highlight">
+          <h3 class="font-display text-xl font-bold mb-3 text-primary">Projected Impact Reinforcement</h3>
+          <div class="grid md:grid-cols-2 gap-6">
+            <div>
+              <h4 class="font-bold mb-3">Direct Impact</h4>
+              <ul class="space-y-2 text-gray-600">
+                <li class="flex items-center">
+                  <i class="fas fa-eye text-green-500 mr-2"></i>
+                  <span><strong>1 million</strong> cataract surgeries restoring sight</span>
+                </li>
+                <li class="flex items-center">
+                  <i class="fas fa-hospital text-blue-500 mr-2"></i>
+                  <span><strong>15 million</strong> people served through Vision Centers</span>
+                </li>
+                <li class="flex items-center">
+                  <i class="fas fa-graduation-cap text-purple-500 mr-2"></i>
+                  <span><strong>1,000+</strong> health professionals trained</span>
+                </li>
+              </ul>
+            </div>
+            <div>
+              <h4 class="font-bold mb-3">Economic Benefits</h4>
+              <ul class="space-y-2 text-gray-600">
+                <li class="flex items-center">
+                  <i class="fas fa-chart-line text-green-500 mr-2"></i>
+                  <span><strong>$5.5 billion</strong> in social and economic value</span>
+                </li>
+                <li class="flex items-center">
+                  <i class="fas fa-users text-blue-500 mr-2"></i>
+                  <span>Increased productivity and household income</span>
+                </li>
+                <li class="flex items-center">
+                  <i class="fas fa-child text-accent mr-2"></i>
+                  <span>Improved educational outcomes for children</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="mt-6 p-4 bg-white rounded-lg border-l-4 border-primary">
+            <p class="text-lg font-bold text-primary mb-2">$1:$36 Return on Investment</p>
+            <p class="text-gray-600 text-sm">
+              Every dollar invested generates $36 in social and economic benefits, making this one of the most effective philanthropic investments in global health<a href="#ref-285" class="citation">285</a>.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- References Section -->
+      <section class="mb-16 bg-gray-50 rounded-2xl p-8">
+        <h2 class="font-display text-2xl font-bold mb-6 text-gray-800">References</h2>
+        <div class="grid md:grid-cols-2 gap-4 text-sm">
+          <div class="space-y-2">
+            <div id="ref-65"><strong>[65]</strong>
+              <a href="https://www.charitywatch.org/charities/seva-foundation" class="text-blue-600 hover:underline">CharityWatch - Seva Foundation Analysis</a>
+            </div>
+            <div id="ref-80"><strong>[80]</strong>
+              <a href="https://2024.sci-hub.se/1613/8334e8741a81d0adb5a01b20a26727d4/marseille1996.pdf" class="text-blue-600 hover:underline">Nepal Cataract Surgery Cost Study</a>
+            </div>
+            <div id="ref-98"><strong>[98]</strong>
+              <a href="https://www.seva.org/site/DocServer/Seva_annual_report_2022.pdf" class="text-blue-600 hover:underline">Seva Annual Report 2022</a>
+            </div>
+            <div id="ref-109"><strong>[109]</strong>
+              <a href="https://give.org/charity-reviews/blind-and-visually-impaired/seva-foundation-in-berkeley-ca-9999-191" class="text-blue-600 hover:underline">BBB Wise Giving Alliance - Seva Foundation</a>
+            </div>
+            <div id="ref-181"><strong>[181]</strong>
+              <a href="https://www.charitynavigator.org/ein/382231279" class="text-blue-600 hover:underline">Charity Navigator - Seva Foundation</a>
+            </div>
+            <div id="ref-230"><strong>[230]</strong>
+              <a href="https://files.givewell.org/files/conversations/Suzanne_Gilbert_Chundak_Tenzing_and_Heidi_Chase_01-13-2016_(public).pdf" class="text-blue-600 hover:underline">GiveWell Interview - Seva Foundation</a>
+            </div>
+            <div id="ref-231"><strong>[231]</strong>
+              <a href="https://www.seva.org/site/DocServer/Seva_ImpactReport_2023.pdf" class="text-blue-600 hover:underline">Seva Impact Report 2023</a>
+            </div>
+            <div id="ref-243"><strong>[243]</strong>
+              <a href="https://www.seva.org/site/DocServer/Seva_Global_Vision_Center_Survey_Report_2025.pdf" class="text-blue-600 hover:underline">Seva Global Vision Center Survey Report</a>
+            </div>
+            <div id="ref-245"><strong>[245]</strong>
+              <a href="https://thediplomat.com/2025/08/the-gift-of-sight-seva-foundations-vision-for-global-health/" class="text-blue-600 hover:underline">The Diplomat - Seva Foundation Profile</a>
+            </div>
+            <div id="ref-247"><strong>[247]</strong>
+              <a href="https://www.seva.org/site/SPageServer?pagename=about/timeline" class="text-blue-600 hover:underline">Seva Foundation Timeline</a>
+            </div>
+            <div id="ref-258"><strong>[258]</strong>
+              <a href="https://www.seva.org/site/DocServer/Seva_ImpactReport_2022.pdf" class="text-blue-600 hover:underline">Seva Impact Report 2022</a>
+            </div>
+            <div id="ref-265"><strong>[265]</strong>
+              <a href="https://www.usatoday.com/story/special/contributor-content/2025/07/21/using-technology-in-service-of-compassion-how-seva-foundation-merges-science-and-humanity-to-transfo/85311669007/" class="text-blue-600 hover:underline">USA Today - Seva Foundation Technology</a>
+            </div>
+          </div>
+          <div class="space-y-2">
+            <div id="ref-280"><strong>[280]</strong>
+              <a href="https://www.iapb.org/news/new-report-finds-every-1-invested-in-eye-health-returns-36-in-benefits-across-society/" class="text-blue-600 hover:underline">IAPB - ROI Study</a>
+            </div>
+            <div id="ref-285"><strong>[285]</strong>
+              <a href="https://blog.seva.org/what-kind-of-return-does-a-dollar-get/" class="text-blue-600 hover:underline">Seva Blog - ROI Analysis</a>
+            </div>
+            <div id="ref-339"><strong>[339]</strong>
+              <a href="https://www.seva.org/site/SPageServer/?pagename=reports" class="text-blue-600 hover:underline">Seva Foundation Reports</a>
+            </div>
+            <div id="ref-341"><strong>[341]</strong>
+              <a href="http://www.seva.org/pdf/Seva_Country_Fact_Sheets_Guatemala.pdf" class="text-blue-600 hover:underline">Seva Guatemala Fact Sheet</a>
+            </div>
+            <div id="ref-342"><strong>[342]</strong>
+              <a href="https://www.mightycause.com/organization/Seva-Foundation" class="text-blue-600 hover:underline">MightyCause - Seva Foundation</a>
+            </div>
+            <div id="ref-349"><strong>[349]</strong>
+              <a href="https://give.org/charity-reviews/blind-and-visually-impaired/seva-foundation-in-berkeley-ca-9999-191" class="text-blue-600 hover:underline">BBB Wise Giving Report</a>
+            </div>
+            <div id="ref-351"><strong>[351]</strong>
+              <a href="https://www.visionforthepoor.org/efficiency-drives-visualizas-success/" class="text-blue-600 hover:underline">Vision for the Poor - Visualiza Success</a>
+            </div>
+            <div id="ref-356"><strong>[356]</strong>
+              <a href="https://www.focusingphilanthropy.org/wp-content/uploads/2023/11/2020-Seva-WSD-Campaign-Report.pdf" class="text-blue-600 hover:underline">Focusing Philanthropy - Seva Campaign Report</a>
+            </div>
+            <div id="ref-409"><strong>[409]</strong>
+              <a href="http://www.seva.org/pdf/Seva_Country_Fact_Sheets_Guatemala.pdf" class="text-blue-600 hover:underline">Seva Guatemala Program Details</a>
+            </div>
+            <div id="ref-410"><strong>[410]</strong>
+              <a href="https://solutionsbank.candid.org/solutions/scaling-sight-ending-preventable-blindness-in-guatemala-and-beyond/" class="text-blue-600 hover:underline">Candid Solutions Bank - Guatemala Initiative</a>
+            </div>
+            <div id="ref-411"><strong>[411]</strong>
+              <a href="https://www.seva.org/site/SPageServer/?pagename=americas" class="text-blue-600 hover:underline">Seva Americas Program</a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <script>
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    </script>
+  
+
+</body></html>

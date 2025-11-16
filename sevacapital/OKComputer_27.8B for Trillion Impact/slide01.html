@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seva: The $1 Trillion Vision</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --sage: #9CAF88;
+            --charcoal: #2D3436;
+            --cream: #F7F3E9;
+            --gold: #D4A574;
+            --deep-sage: #7D8471;
+        }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            background: linear-gradient(135deg, var(--cream) 0%, #F1EDE4 100%);
+            overflow: hidden;
+            height: 100vh;
+            width: 100vw;
+        }
+        
+        .hero-title {
+            font-family: 'Playfair Display', serif;
+            font-weight: 800;
+            font-size: clamp(4rem, 8vw, 8rem);
+            line-height: 0.9;
+            letter-spacing: -0.02em;
+        }
+        
+        .hero-subtitle {
+            font-weight: 300;
+            font-size: clamp(1.2rem, 2.5vw, 2rem);
+            letter-spacing: 0.02em;
+        }
+        
+        .hero-highlight {
+            background: linear-gradient(45deg, var(--sage), var(--gold));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .floating-element {
+            position: absolute;
+            opacity: 0.1;
+            animation: float 6s ease-in-out infinite;
+        }
+        
+        .floating-element:nth-child(odd) {
+            animation-delay: -3s;
+        }
+        
+        @keyframes float {
+            0%, 100% { transform: translateY(0px) rotate(0deg); }
+            50% { transform: translateY(-20px) rotate(5deg); }
+        }
+        
+        .grain-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: 
+                radial-gradient(circle at 25% 25%, rgba(156, 175, 136, 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 75% 75%, rgba(212, 165, 116, 0.1) 0%, transparent 50%);
+            pointer-events: none;
+        }
+        
+        .content-layer {
+            position: relative;
+            z-index: 10;
+        }
+        
+        .masked-image {
+            mask: radial-gradient(ellipse 60% 80% at 30% 50%, black 0%, transparent 100%);
+            -webkit-mask: radial-gradient(ellipse 60% 80% at 30% 50%, black 0%, transparent 100%);
+        }
+        
+        .stat-box {
+            backdrop-filter: blur(10px);
+            background: rgba(255, 255, 255, 0.9);
+            border: 1px solid rgba(156, 175, 136, 0.2);
+        }
+        
+        @media (max-width: 768px) {
+            .hero-title {
+                font-size: clamp(2.5rem, 8vw, 4rem);
+            }
+            .hero-subtitle {
+                font-size: clamp(1rem, 4vw, 1.5rem);
+            }
+        }
+    </style>
+</head>
+<body class="flex items-center justify-center min-h-screen">
+    <div class="grain-overlay"></div>
+    
+    <!-- Floating decorative elements -->
+    <div class="floating-element top-20 left-20 w-32 h-32 rounded-full bg-gradient-to-br from-sage to-gold"></div>
+    <div class="floating-element top-40 right-32 w-24 h-24 rounded-full bg-gradient-to-br from-gold to-sage"></div>
+    <div class="floating-element bottom-32 left-40 w-28 h-28 rounded-full bg-gradient-to-br from-sage to-deep-sage"></div>
+    <div class="floating-element bottom-20 right-20 w-20 h-20 rounded-full bg-gradient-to-br from-gold to-sage"></div>
+
+    <div class="content-layer w-full h-full flex">
+        <!-- Left side - Content -->
+        <div class="w-3/5 h-full flex flex-col justify-center pl-16 pr-8">
+            <div class="space-y-8">
+                <div class="text-sm font-medium text-charcoal opacity-60 tracking-wider uppercase">
+                    Institutional Capital Raise
+                </div>
+                
+                <h1 class="hero-title text-charcoal leading-none">
+                    The <span class="hero-highlight">$1 Trillion</span><br>
+                    Vision
+                </h1>
+                
+                <p class="hero-subtitle text-charcoal opacity-80 max-w-2xl leading-relaxed">
+                    Transforming global eye care through strategic capital deployment.<br>
+                    <span class="text-sage font-medium">$27.8B</span> to unlock <span class="text-gold font-medium">$1T</span> in human potential.
+                </p>
+                
+                <div class="flex space-x-8 pt-8">
+                    <div class="stat-box rounded-2xl p-6 shadow-lg">
+                        <div class="text-3xl font-bold text-charcoal">2.2B</div>
+                        <div class="text-sm text-charcoal opacity-70 mt-1">People with vision impairment</div>
+                    </div>
+                    <div class="stat-box rounded-2xl p-6 shadow-lg">
+                        <div class="text-3xl font-bold text-charcoal">$411B</div>
+                        <div class="text-sm text-charcoal opacity-70 mt-1">Annual productivity loss</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Right side - Hero Image -->
+        <div class="w-2/5 h-full relative">
+            <div class="masked-image w-full h-full bg-gradient-to-br from-sage/20 to-gold/30"></div>
+            <div class="absolute inset-0 bg-gradient-to-l from-transparent via-cream/50 to-cream/80"></div>
+        </div>
+    </div>
+    
+    <!-- Bottom attribution -->
+    <div class="absolute bottom-8 left-16 text-xs text-charcoal opacity-50">
+        Source: <a href="https://www.who.int/news-room/fact-sheets/detail/blindness-and-visual-impairment" class="underline hover:opacity-80">WHO Global Eye Health 2024</a> • 
+        <a href="https://www.nature.com/articles/s41433-023-02860-x" class="underline hover:opacity-80">Nature Eye Health Commission</a>
+    </div>
+<script>
+    document.addEventListener('keydown', e => {
+        if (e.key === 'ArrowRight' || e.key === ' ') {
+            e.preventDefault();
+            window.parent.postMessage('go-next', '*');
+        } else if (e.key === 'ArrowLeft') {
+            e.preventDefault();
+            window.parent.postMessage('go-prev', '*');
+        }
+    });
+</script>
+</body>
+</html>

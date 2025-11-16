@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Implementation Roadmap</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --sage: #9CAF88;
+            --charcoal: #2D3436;
+            --cream: #F7F3E9;
+            --gold: #D4A574;
+            --deep-sage: #7D8471;
+        }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            background: linear-gradient(135deg, var(--cream) 0%, #F1EDE4 100%);
+            overflow: hidden;
+            height: 100vh;
+            width: 100vw;
+        }
+        
+        .section-title {
+            font-family: 'Playfair Display', serif;
+            font-weight: 700;
+            font-size: clamp(2.5rem, 5vw, 4rem);
+            line-height: 1.1;
+            letter-spacing: -0.02em;
+        }
+        
+        .timeline-item {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(156, 175, 136, 0.2);
+            transition: all 0.3s ease;
+            position: relative;
+        }
+        
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -2px;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 4px;
+            height: 0;
+            background: linear-gradient(180deg, var(--sage), var(--gold));
+            transition: height 0.4s ease;
+        }
+        
+        .timeline-item:hover::before {
+            height: 80%;
+        }
+        
+        .timeline-item:hover {
+            transform: translateX(8px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+        }
+        
+        .phase-number {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--sage), var(--gold));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: 700;
+            font-size: 18px;
+        }
+        
+        .milestone-icon {
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            background: var(--cream);
+            border: 2px solid var(--sage);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--sage);
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body class="flex items-center justify-center min-h-screen">
+    <div class="w-full h-full flex">
+        <!-- Left side - Timeline -->
+        <div class="w-3/5 h-full flex flex-col justify-center pl-16 pr-8">
+            <div class="space-y-8">
+                <div class="text-sm font-medium text-charcoal opacity-60 tracking-wider uppercase">
+                    Strategic Implementation
+                </div>
+                
+                <h1 class="section-title text-charcoal">
+                    Deployment<br>
+                    <span class="text-sage">Roadmap</span>
+                </h1>
+                
+                <p class="text-lg text-charcoal opacity-80 leading-relaxed max-w-lg">
+                    A 36-month phased approach to global scale-up with measurable milestones and risk mitigation.
+                </p>
+                
+                <div class="space-y-6">
+                    <div class="timeline-item rounded-xl p-6">
+                        <div class="flex items-start space-x-4">
+                            <div class="phase-number">1</div>
+                            <div class="flex-1">
+                                <div class="flex justify-between items-center mb-2">
+                                    <h3 class="text-xl font-bold text-charcoal">Foundation & Framework</h3>
+                                    <span class="text-sm text-sage font-medium">Months 1-8</span>
+                                </div>
+                                <p class="text-charcoal opacity-80 mb-4">
+                                    Establish Capital for Seva SPV, complete ICMA framework design, secure SPO rating, and structure bond documentation.
+                                </p>
+                                <div class="flex space-x-4">
+                                    <div class="milestone-icon"><i class="fas fa-building"></i></div>
+                                    <div class="milestone-icon"><i class="fas fa-file-contract"></i></div>
+                                    <div class="milestone-icon"><i class="fas fa-star"></i></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-item rounded-xl p-6">
+                        <div class="flex items-start space-x-4">
+                            <div class="phase-number">2</div>
+                            <div class="flex-1">
+                                <div class="flex justify-between items-center mb-2">
+                                    <h3 class="text-xl font-bold text-charcoal">Pilot Deployment</h3>
+                                    <span class="text-sm text-gold font-medium">Months 9-18</span>
+                                </div>
+                                <p class="text-charcoal opacity-80 mb-4">
+                                    Launch 25 vision centers across 5 priority countries, deploy initial surgical equipment, and begin workforce training programs.
+                                </p>
+                                <div class="flex space-x-4">
+                                    <div class="milestone-icon"><i class="fas fa-eye"></i></div>
+                                    <div class="milestone-icon"><i class="fas fa-stethoscope"></i></div>
+                                    <div class="milestone-icon"><i class="fas fa-graduation-cap"></i></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-item rounded-xl p-6">
+                        <div class="flex items-start space-x-4">
+                            <div class="phase-number">3</div>
+                            <div class="flex-1">
+                                <div class="flex justify-between items-center mb-2">
+                                    <h3 class="text-xl font-bold text-charcoal">Scale & Optimize</h3>
+                                    <span class="text-sm text-deep-sage font-medium">Months 19-36</span>
+                                </div>
+                                <p class="text-charcoal opacity-80 mb-4">
+                                    Expand to 200 vision centers, integrate AI diagnostics, achieve 1M surgeries annually, and establish sustainable operations.
+                                </p>
+                                <div class="flex space-x-4">
+                                    <div class="milestone-icon"><i class="fas fa-rocket"></i></div>
+                                    <div class="milestone-icon"><i class="fas fa-robot"></i></div>
+                                    <div class="milestone-icon"><i class="fas fa-chart-line"></i></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Right side - Key Metrics -->
+        <div class="w-2/5 h-full flex flex-col justify-center pr-16 pl-8">
+            <div class="space-y-8">
+                <div class="timeline-item rounded-2xl p-8">
+                    <h3 class="text-2xl font-bold text-charcoal mb-6">Success Metrics</h3>
+                    
+                    <div class="space-y-6">
+                        <div class="flex justify-between items-center">
+                            <div>
+                                <div class="font-semibold text-charcoal">Vision Centers</div>
+                                <div class="text-sm text-charcoal opacity-70">Operational by Year 3</div>
+                            </div>
+                            <div class="text-3xl font-bold text-sage">200</div>
+                        </div>
+                        
+                        <div class="flex justify-between items-center">
+                            <div>
+                                <div class="font-semibold text-charcoal">Annual Surgeries</div>
+                                <div class="text-sm text-charcoal opacity-70">Cataract procedures</div>
+                            </div>
+                            <div class="text-3xl font-bold text-gold">1M</div>
+                        </div>
+                        
+                        <div class="flex justify-between items-center">
+                            <div>
+                                <div class="font-semibold text-charcoal">Training Programs</div>
+                                <div class="text-sm text-charcoal opacity-70">Specialists certified</div>
+                            </div>
+                            <div class="text-3xl font-bold text-deep-sage">5,000</div>
+                        </div>
+                        
+                        <div class="flex justify-between items-center">
+                            <div>
+                                <div class="font-semibold text-charcoal">Patient Reach</div>
+                                <div class="text-sm text-charcoal opacity-70">Direct beneficiaries</div>
+                            </div>
+                            <div class="text-3xl font-bold text-charcoal">50M</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="timeline-item rounded-2xl p-8">
+                    <h3 class="text-xl font-bold text-charcoal mb-4">Risk Mitigation</h3>
+                    
+                    <div class="space-y-4">
+                        <div class="flex items-center space-x-3">
+                            <div class="w-2 h-2 rounded-full bg-sage"></div>
+                            <span class="text-sm text-charcoal">Diversified geographic deployment</span>
+                        </div>
+                        <div class="flex items-center space-x-3">
+                            <div class="w-2 h-2 rounded-full bg-gold"></div>
+                            <span class="text-sm text-charcoal">Phased investment with milestones</span>
+                        </div>
+                        <div class="flex items-center space-x-3">
+                            <div class="w-2 h-2 rounded-full text-deep-sage"></div>
+                            <span class="text-sm text-charcoal">Proven intervention models</span>
+                        </div>
+                        <div class="flex items-center space-x-3">
+                            <div class="w-2 h-2 rounded-full bg-charcoal"></div>
+                            <span class="text-sm text-charcoal">Institutional partnerships</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Bottom attribution -->
+    <div class="absolute bottom-8 left-16 text-xs text-charcoal opacity-50">
+        Implementation framework: Seva Foundation • Timeline: ICMA best practices
+    </div>
+<script>
+    document.addEventListener('keydown', e => {
+        if (e.key === 'ArrowRight' || e.key === ' ') {
+            e.preventDefault();
+            window.parent.postMessage('go-next', '*');
+        } else if (e.key === 'ArrowLeft') {
+            e.preventDefault();
+            window.parent.postMessage('go-prev', '*');
+        }
+    });
+</script>
+</body>
+</html>

@@ -15,11 +15,11 @@ export default function Document() {
         <link rel="preconnect" href="https://cdn.tailwindcss.com" />
 
         {/* SEO Meta Tags */}
-        <meta name="author" content="Capital for Seva" />
-        <meta name="keywords" content="SDG Bond, Social Impact Investment, ESG, Sustainable Development Goals, Eye Health, Impact Investing, ICMA, BlackRock, Sovereign Wealth Fund" />
+        <meta name="author" content="Drishti Capital" />
+        <meta name="keywords" content="SDG Bond, Social Impact Investment, ESG, Sustainable Development Goals, Eye Health, Impact Investing, ICMA, Institutional Investors, Sovereign Wealth Fund" />
 
         {/* Open Graph / Social Media */}
-        <meta property="og:site_name" content="Seva Capital" />
+        <meta property="og:site_name" content="Drishti Capital" />
         <meta property="og:locale" content="en_US" />
 
         {/* Twitter Card */}

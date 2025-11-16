@@ -1,7 +1,7 @@
 {
-  "name": "sevacapital-campaign",
+  "name": "drishti-capital-platform",
   "version": "1.0.0",
-  "description": "$7B SDG-Aligned Social Bond - Institutional Investor Platform",
+  "description": "SDG-Aligned Social Bond Platform - Drishti Capital",
   "private": true,
   "scripts": {
     "dev": "next dev",

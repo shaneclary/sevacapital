@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "name": "sevacapital-bond",
+  "name": "drishti-capital",
   "framework": "nextjs",
   "buildCommand": "npm run build",
   "devCommand": "npm run dev",

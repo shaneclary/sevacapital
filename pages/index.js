@@ -31,11 +31,11 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>Seva Capital - SDG Bond Concept | Alpha Platform</title>
+        <title>Drishti Capital - SDG Bond Concept | Alpha Platform</title>
         <meta name="description" content="Alpha platform demonstrating SDG-aligned social bond structure for global eye health infrastructure with 36:1 social ROI projection" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta property="og:title" content="Seva Capital - SDG Bond Concept Platform" />
-        <meta property="og:description" content="Concept platform for SDG-aligned social bond supporting Seva Foundation's global eye health programs" />
+        <meta property="og:title" content="Drishti Capital - SDG Bond Concept Platform" />
+        <meta property="og:description" content="Independent fundraising platform for SDG-aligned social bond supporting Seva Foundation's global eye health programs" />
         <meta property="og:type" content="website" />
         <meta name="robots" content="noindex, nofollow" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -60,7 +60,7 @@ export default function Home() {
                   Alpha Platform • Concept Demo • Not Financial Advice
                 </p>
                 <h1 className="text-5xl md:text-7xl font-black text-white leading-tight">
-                  Capital for <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-emerald-400 to-green-500">Seva</span>
+                  <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-emerald-400 to-green-500">Drishti</span> Capital
                 </h1>
               </div>
 
@@ -173,14 +173,14 @@ export default function Home() {
               <div className="mt-16 p-8 bg-white/5 backdrop-blur-sm rounded-2xl border border-white/10 max-w-2xl mx-auto">
                 <h3 className="text-xl font-bold text-white mb-4">Platform Information</h3>
                 <p className="text-gray-300 mb-4">
-                  Concept platform demonstrating structured finance approach for Seva Foundation's global eye health programs
+                  Independent fundraising platform demonstrating structured finance approach for Seva Foundation's global eye health programs. Drishti Capital is not affiliated with or representing Seva Foundation.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center text-sm">
                   <div className="flex items-center gap-2 text-emerald-400">
                     <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                     </svg>
-                    <span>investor-relations@sevacapital.com</span>
+                    <span>contact@drishticapital.com</span>
                   </div>
                   <div className="flex items-center gap-2 text-amber-400">
                     <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">

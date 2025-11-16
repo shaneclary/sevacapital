@@ -31,13 +31,13 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>Seva Capital - $7B SDG Bond Offering | Institutional Investors</title>
-        <meta name="description" content="$7 Billion SDG-Aligned Social Bond for Global Eye Health Infrastructure - ICMA Compliant, Moody's ESG Verified, 36:1 Social ROI" />
+        <title>Seva Capital - SDG Bond Concept | Alpha Platform</title>
+        <meta name="description" content="Alpha platform demonstrating SDG-aligned social bond structure for global eye health infrastructure with 36:1 social ROI projection" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta property="og:title" content="Seva Capital - $7B SDG Bond Offering" />
-        <meta property="og:description" content="Investment-grade impact opportunity: $7B social bond targeting BlackRock, sovereign funds, and institutional ESG portfolios" />
+        <meta property="og:title" content="Seva Capital - SDG Bond Concept Platform" />
+        <meta property="og:description" content="Concept platform for SDG-aligned social bond supporting Seva Foundation's global eye health programs" />
         <meta property="og:type" content="website" />
-        <meta name="robots" content="index, follow" />
+        <meta name="robots" content="noindex, nofollow" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800;900&display=swap" rel="stylesheet" />
@@ -56,8 +56,8 @@ export default function Home() {
           <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
             <div className="text-center space-y-8 animate-fade-in">
               <div className="space-y-2">
-                <p className="text-sm uppercase tracking-[0.3em] text-emerald-400 font-semibold">
-                  Institutional Offering • ICMA Compliant • Moody's ESG Verified
+                <p className="text-sm uppercase tracking-[0.3em] text-amber-400 font-semibold">
+                  Alpha Platform • Concept Demo • Not Financial Advice
                 </p>
                 <h1 className="text-5xl md:text-7xl font-black text-white leading-tight">
                   Capital for <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-emerald-400 to-green-500">Seva</span>
@@ -65,12 +65,19 @@ export default function Home() {
               </div>
 
               <p className="text-3xl md:text-4xl font-bold text-gray-100 max-w-4xl mx-auto">
-                $7.0 Billion SDG-Aligned Social Bond
+                SDG-Aligned Social Bond Concept
               </p>
 
               <p className="text-xl md:text-2xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
-                Investment-grade opportunity to unlock <span className="text-emerald-400 font-bold">$252 Billion</span> in human productivity through proven eye-care infrastructure at a verified <span className="text-blue-400 font-bold">36:1 social ROI</span>
+                Demonstrating how structured finance could unlock <span className="text-emerald-400 font-bold">$252 Billion</span> in human productivity through eye-care infrastructure with projected <span className="text-blue-400 font-bold">36:1 social ROI</span>
               </p>
+
+              {/* Alpha Disclaimer */}
+              <div className="max-w-3xl mx-auto p-4 bg-amber-500/10 border border-amber-500/30 rounded-xl">
+                <p className="text-sm text-amber-200">
+                  <strong>⚠️ Alpha Platform:</strong> This is a concept demonstration. No securities are currently offered. Data is simulated for illustrative purposes.
+                </p>
+              </div>
 
               {/* Live KPI Stats */}
               {kpiData && !loading && (
@@ -108,11 +115,11 @@ export default function Home() {
               {/* CTA Buttons */}
               <div className="flex flex-col sm:flex-row gap-6 justify-center items-center mt-16">
                 <a
-                  href="/public/pitch.html"
+                  href="/pitch.html"
                   className="group px-10 py-5 text-lg font-bold text-white bg-gradient-to-r from-blue-600 to-emerald-600 rounded-full shadow-2xl hover:shadow-emerald-500/50 transform transition-all duration-300 hover:scale-110 hover:-translate-y-1"
                 >
                   <span className="flex items-center gap-3">
-                    View Investor Pitch
+                    View Concept Pitch
                     <svg className="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
                     </svg>
@@ -120,56 +127,53 @@ export default function Home() {
                 </a>
 
                 <a
-                  href="/public/investor_portal.html"
+                  href="/investor_portal.html"
                   className="px-10 py-5 text-lg font-bold text-white border-2 border-white/30 rounded-full hover:bg-white/10 backdrop-blur-sm transition-all duration-300 hover:border-white/60"
                 >
-                  Live Investor Portal
+                  Demo Portal
                 </a>
               </div>
 
-              {/* Trust Badges */}
+              {/* Framework References */}
               <div className="mt-16 pt-8 border-t border-white/10">
-                <p className="text-sm text-gray-400 uppercase tracking-[0.2em] mb-4">Verified By</p>
+                <p className="text-sm text-gray-400 uppercase tracking-[0.2em] mb-4">Framework References</p>
                 <div className="flex flex-wrap justify-center items-center gap-8 text-gray-400">
                   <div className="px-6 py-3 bg-white/5 rounded-lg border border-white/10">
-                    <span className="text-xs font-semibold tracking-wider">ICMA COMPLIANT</span>
+                    <span className="text-xs font-semibold tracking-wider">ICMA Principles</span>
                   </div>
                   <div className="px-6 py-3 bg-white/5 rounded-lg border border-white/10">
-                    <span className="text-xs font-semibold tracking-wider">MOODY'S ESG</span>
+                    <span className="text-xs font-semibold tracking-wider">SDG Aligned</span>
                   </div>
                   <div className="px-6 py-3 bg-white/5 rounded-lg border border-white/10">
-                    <span className="text-xs font-semibold tracking-wider">GISD ALIGNED</span>
-                  </div>
-                  <div className="px-6 py-3 bg-white/5 rounded-lg border border-white/10">
-                    <span className="text-xs font-semibold tracking-wider">CBI CERTIFIED</span>
+                    <span className="text-xs font-semibold tracking-wider">Impact Thesis</span>
                   </div>
                 </div>
               </div>
 
               {/* Quick Links */}
               <div className="mt-12 flex flex-wrap justify-center gap-4 text-sm">
-                <a href="/public/keynote/present.html" className="text-blue-400 hover:text-blue-300 underline underline-offset-4">
-                  $27.8B Full Strategy Deck
+                <a href="/keynote/present.html" className="text-blue-400 hover:text-blue-300 underline underline-offset-4">
+                  Strategy Overview
                 </a>
                 <span className="text-gray-600">•</span>
-                <a href="/public/icma.html" className="text-blue-400 hover:text-blue-300 underline underline-offset-4">
-                  ICMA Framework
+                <a href="/icma.html" className="text-blue-400 hover:text-blue-300 underline underline-offset-4">
+                  Bond Framework
                 </a>
                 <span className="text-gray-600">•</span>
-                <a href="/public/gisd-compliance.html" className="text-blue-400 hover:text-blue-300 underline underline-offset-4">
-                  GISD Compliance
+                <a href="/gisd-compliance.html" className="text-blue-400 hover:text-blue-300 underline underline-offset-4">
+                  SDG Mapping
                 </a>
                 <span className="text-gray-600">•</span>
-                <a href="/public/seva.html" className="text-blue-400 hover:text-blue-300 underline underline-offset-4">
-                  Strategy Dossier
+                <a href="/seva.html" className="text-blue-400 hover:text-blue-300 underline underline-offset-4">
+                  Impact Dossier
                 </a>
               </div>
 
               {/* Contact Info */}
               <div className="mt-16 p-8 bg-white/5 backdrop-blur-sm rounded-2xl border border-white/10 max-w-2xl mx-auto">
-                <h3 className="text-xl font-bold text-white mb-4">Investor Relations</h3>
+                <h3 className="text-xl font-bold text-white mb-4">Platform Information</h3>
                 <p className="text-gray-300 mb-4">
-                  Independent capital syndicate raising institutional funding for Seva Foundation's global eye health programs
+                  Concept platform demonstrating structured finance approach for Seva Foundation's global eye health programs
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center text-sm">
                   <div className="flex items-center gap-2 text-emerald-400">
@@ -178,11 +182,11 @@ export default function Home() {
                     </svg>
                     <span>investor-relations@sevacapital.com</span>
                   </div>
-                  <div className="flex items-center gap-2 text-gray-400">
+                  <div className="flex items-center gap-2 text-amber-400">
                     <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
                     </svg>
-                    <span>Timeline to Close: 16 Weeks</span>
+                    <span>Status: Alpha Testing</span>
                   </div>
                 </div>
               </div>

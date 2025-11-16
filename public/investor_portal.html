@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="gsid:alignment" content="2025-11-16">
     <link rel="external" href="https://www.un.org/gsa/sites/www.un.org.gsa/files/2024-07/GISD%20Alliance%20Guidance%20on%20Sovereign%20SDG%20Bonds-FINAL.pdf">
-    <title>Seva SDG Bond Investor Portal</title>
+    <title>Seva SDG Bond Concept Portal - Alpha Demo</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.1/chart.min.js" xintegrity="sha512-QSkVNOCYLNNoMSnBU5kCZnRrfEMQsIEndaJfveKjxETDabZk5iBv2BCR-MKLVpDSRVYH0m1wOinFwpXHYkKLRg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800;900&display=swap" rel="stylesheet">
@@ -198,37 +198,49 @@
     </nav>
 
     <div class="min-h-screen p-4 sm:p-8">
+        <!-- Alpha Warning Banner -->
+        <div class="mb-6 p-4 bg-amber-500/10 border-2 border-amber-500/50 rounded-xl">
+            <div class="flex items-start gap-3">
+                <svg class="w-6 h-6 text-amber-400 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"></path>
+                </svg>
+                <div>
+                    <h3 class="text-lg font-bold text-amber-200 mb-1">⚠️ Alpha Platform - Concept Demonstration</h3>
+                    <p class="text-sm text-amber-100">This is a concept demonstration platform. No securities are currently offered. All data is simulated for illustrative purposes only. Not financial advice.</p>
+                </div>
+            </div>
+        </div>
+
         <header class="mb-10 border-b border-slate-700 pb-4">
             <div class="flex flex-wrap items-center justify-between gap-3">
                 <div>
-                    <h1 class="text-4xl font-extrabold text-white">Seva $\text{SDG \ Bond \ Investor \ Portal}$</h1>
-                    <p class="text-xs uppercase tracking-[0.3em] text-slate-500 mt-2">Operated by Capital for Seva — raising capital on behalf of Seva Foundation</p>
-                    <p class="text-xl text-slate-400 mt-1">Live Covenant Monitoring & Impact Reporting ($\mathbf{\$7.0 \text{ Billion} \text{ Issuance}}$)</p>
+                    <h1 class="text-4xl font-extrabold text-white">Seva SDG Bond Concept Portal</h1>
+                    <p class="text-xs uppercase tracking-[0.3em] text-slate-500 mt-2">Demo Platform • Alpha Testing • Concept Only</p>
+                    <p class="text-xl text-slate-400 mt-1">Simulated Monitoring & Impact Reporting Demo</p>
                 </div>
                 <div class="flex flex-wrap gap-2">
-                    <a href="icma.html" class="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-emerald-300/60 bg-emerald-500/10 text-emerald-100 text-sm font-semibold hover:bg-emerald-500/20 transition" aria-label="View Moody's ESG Second Party Opinion">
-                        <span class="text-xs tracking-[0.2em] uppercase">SPO</span>
-                        <span>Moody's ESG Verified</span>
+                    <a href="icma.html" class="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-blue-300/60 bg-blue-500/10 text-blue-100 text-sm font-semibold hover:bg-blue-500/20 transition">
+                        <span class="text-xs tracking-[0.2em] uppercase">Framework</span>
+                        <span>ICMA Reference</span>
                     </a>
-                    <a href="gisd-compliance.html" class="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-emerald-300/60 bg-emerald-500/10 text-emerald-100 text-xs font-semibold hover:bg-emerald-500/20 transition">
-                        <span class="tracking-[0.2em] uppercase">GISD</span><span>Aligned</span>
+                    <a href="gisd-compliance.html" class="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-blue-300/60 bg-blue-500/10 text-blue-100 text-xs font-semibold hover:bg-blue-500/20 transition">
+                        <span class="tracking-[0.2em] uppercase">SDG</span><span>Mapping</span>
                     </a>
                 </div>
             </div>
             <div class="text-xs mt-3 text-slate-500 flex flex-wrap items-center gap-3">
                 <span id="last-updated" data-timestamp="">Data Snapshot: --</span>
-                <span>Asset-Backed Social Bond</span>
-                <button id="isin-copy" type="button" class="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-slate-500 text-slate-200 hover:bg-white/5 transition" data-isin="SEVA-SDG-26">
-                    <span>ISIN: SEVA-SDG-26</span>
-                    <span aria-hidden="true">📋</span>
-                </button>
+                <span>Concept Bond Structure</span>
+                <span class="px-3 py-1 rounded-full border border-amber-500 text-amber-200 bg-amber-500/10">
+                    Simulated Data
+                </span>
             </div>
             <div id="stale-banner" class="hidden mt-3 px-4 py-2 rounded-lg border border-amber-400 text-amber-200 text-sm bg-amber-500/10">
                 Data stale &mdash; awaiting latest allocation feed.
             </div>
             <div class="mt-5 flex flex-wrap gap-3 text-sm font-semibold">
-                <a href="pitch.html" class="px-4 py-2 rounded-full border border-emerald-300/40 text-emerald-100 bg-emerald-500/10 hover:bg-emerald-500/20 transition">View investor pitch</a>
-                <a href="projectweaver.html" class="px-4 py-2 rounded-full border border-blue-300/40 text-blue-100 bg-blue-500/10 hover:bg-blue-500/20 transition">Open Project Weaver blueprint</a>
+                <a href="pitch.html" class="px-4 py-2 rounded-full border border-emerald-300/40 text-emerald-100 bg-emerald-500/10 hover:bg-emerald-500/20 transition">View concept pitch</a>
+                <a href="projectweaver.html" class="px-4 py-2 rounded-full border border-blue-300/40 text-blue-100 bg-blue-500/10 hover:bg-blue-500/20 transition">View framework</a>
             </div>
         </header>
 

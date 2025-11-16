@@ -1,0 +1,16 @@
+{
+  "timestamp": "2024-07-29T10:00:00Z",
+  "total_allocated": 6850000000,
+  "surgeries": {
+    "current": 750000,
+    "target": 1000000
+  },
+  "wage_gain": {
+    "current": 2800000000,
+    "target": 3600000000
+  },
+  "dalys_averted": {
+    "current": 2400000,
+    "target": 3200000
+  }
+}
